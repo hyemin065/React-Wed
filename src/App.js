@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Login from './Login';
 
-function App(){
-  return ( 
-    <Login placeTex={{login: "Login", pass: "Password"}} btnText="buttons" />  
-  )
+
+class App extends Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return ( 
+      <>
+        <Login placeText={
+          {login:"login", pass:"password"}
+        }/>
+      </>
+    )
+  }
+  
 }
 
 export default App;

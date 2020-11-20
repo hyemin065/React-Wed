@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function Button(props){
-    return(
-        <button>{props.btn}</button>
-    );
+class Button extends Component{
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+        return(
+            <button>{this.props.text}</button>
+        );
+    }
 }
 
 export default Button;
