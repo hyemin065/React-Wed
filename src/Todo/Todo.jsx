@@ -44,8 +44,6 @@ const Button = styled.button`
     border:1px solid #222;      
 `;
 class Todo extends React.Component{
-    
-
     constructor(props){
         super(props);
         this.state = {
@@ -95,7 +93,9 @@ class Todo extends React.Component{
 
     componentDidMount(){
         const initState = JSON.parse(localStorage.getItem("todolist"));
-        this.setState({todos:initState})
+        if(initState){
+            this.setState({todos:initState})
+        }
     }
 
     componentDidUpdate(){

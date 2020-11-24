@@ -7,7 +7,7 @@ const Li = styled.li`
 
 const Span = styled.span`
     text-decoration: ${props => props.complete ? "line-through":"none"};
-`
+`;
 
 const Button = styled.button`
     width:auto;
@@ -26,7 +26,7 @@ class Items extends React.Component{
     render(){
         return(
             <Li>
-                <Span complete={this.props.done} >{this.props.text}</Span>
+                <Span complete={this.props.done}>{this.props.text}</Span>
                 <Button onClick={() => this.props.deleteLi(this.props.id)} themeColor="red">X</Button>
                 <Button onClick={() => this.props.completeHandler(this.props.id)} themeColor="blue">O</Button>
                 <Button themeColor="green">E</Button>
