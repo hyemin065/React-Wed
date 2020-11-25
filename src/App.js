@@ -1,21 +1,11 @@
-import React, { Component } from 'react';
-import Login from './Login';
 
+import Routers from './Routers';
 
-class App extends Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return ( 
-      <>
-        <Login placeText={
-          {login:"login", pass:"password"}
-        }/>
-      </>
-    )
-  }
-  
+function App() {
+  return (
+    <Routers />
+  );
 }
 
 export default App;
+
