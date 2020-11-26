@@ -3,6 +3,9 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom
 import Todo from './Todo';
 import Parents from './example/Parents';
 import BgChange from './BgChage/BgChange';
+import Prac from './practice/Prac';
+import FunctionCount from './Function/FunctionCount';
+import Bgcolor from "./Function/Bgcolor";
 
 class Routers extends React.Component{
     constructor(props){
@@ -19,6 +22,9 @@ class Routers extends React.Component{
                     <Route path="/todo" component={Todo}/>
                     <Route path="/parents" component={Parents} />
                     <Route path="/bgchange" component={BgChange} />
+                    <Route path="/prac" component={Prac} />
+                    <Route path="/function" component={FunctionCount}/>
+                    <Route path="/bgcolor" component={Bgcolor} />
                     <Redirect from="*" to="/" />
                 </Switch>
             </Router>

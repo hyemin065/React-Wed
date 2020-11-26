@@ -42,7 +42,6 @@ class BgChange extends React.Component{
 
     componentDidUpdate(){
         localStorage.setItem("bgcolor",JSON.stringify(this.state.bgcolor))
-        
     }
 
     render(){
