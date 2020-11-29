@@ -1,9 +1,10 @@
-
 import Routers from './Routers';
 
 function App() {
   return (
-    <Routers />
+    <>
+      <Routers />
+    </>
   );
 }
 

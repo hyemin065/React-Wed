@@ -6,7 +6,7 @@ const Container = styled.div`
     width:300px;
     height:300px;
     border:1px solid #ddd;
-    background-color:#ddd;
+    background-color: ${props => props.bg[0] === "#" ? props.bg : "#" + props.bg};
 
 `;
 
@@ -21,17 +21,18 @@ function Bgcolor(){
     }
 
     const setInput = (e) =>{
-        const bgcolor = 
-        setBgColor();
+        e.preventDefault();
+        setInputValue("")
+        setBgColor(inputValue);
     }
 
     return(
         <>
-        <form>
+        <form onSubmit={setInput}>
             <input type="text" onChange={getInput} value={inputValue}/>
             <button type="submit">칠하기</button>
         </form>
-        <Container></Container>
+        <Container bg={bgColor}></Container>
         </>
     );
 }
